@@ -80,13 +80,16 @@
       }
       h1 {
         margin: 0;
-        max-width: 720px;
-        font-size: clamp(56px, 7.2vw, 104px);
-        letter-spacing: -0.065em;
-        line-height: 0.96;
+        max-width: 660px;
+        font-size: clamp(52px, 6.4vw, 88px);
+        font-weight: 800;
+        letter-spacing: -0.028em;
+        line-height: 1.06;
+        text-wrap: balance;
       }
-      h1 span { display: block; }
+      h1 .line { display: block; }
       .gradient {
+        display: inline;
         background: linear-gradient(135deg, #fff 0%, #dcd8ff 45%, var(--cyan) 100%);
         -webkit-background-clip: text;
         background-clip: text;
@@ -165,7 +168,7 @@
       }
       @media (max-width: 620px) {
         .page { width: min(100% - 28px, 1120px); padding-top: 26px; }
-        h1 { font-size: clamp(48px, 16vw, 72px); letter-spacing: -0.055em; }
+        h1 { font-size: clamp(46px, 14vw, 64px); letter-spacing: -0.018em; line-height: 1.08; }
         .lead { font-size: 17px; }
         .grid { grid-template-columns: 1fr; }
         .metric { grid-template-columns: 1fr; }
@@ -181,7 +184,7 @@
       <section class="hero">
         <div>
           <div class="eyebrow"><span class="dot"></span> AI execution system for commercial traction</div>
-          <h1><span>Turn ideas</span><span>into <span class="gradient">traction.</span></span></h1>
+          <h1><span class="line">Turn ideas</span><span class="line">into <span class="gradient">traction.</span></span></h1>
           <p class="lead">Veyraxo helps creators, solo founders, and small teams validate offers, build commercial sprints, track market signals, and stay accountable to the next action.</p>
           <div class="actions">
             <a class="btn primary" href="#start">Start your sprint</a>
