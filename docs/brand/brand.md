@@ -9,6 +9,15 @@ Veyraxo = direction + action + outcome.
 ## Tagline
 Turn ideas into traction.
 
+## Source of truth
+SVG is the brand source of truth during early product development.
+
+Use:
+- `assets/brand/veyraxo-logo-master.svg` as the master logo file.
+- `public/brand/veyraxo-logo.svg` for browser/app display.
+
+Do not add new PNG or ICO files until the identity is locked.
+
 ## Primary colors
 - #0C1326
 - #141D38
