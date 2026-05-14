@@ -1,0 +1,17 @@
+{
+  "name": "Veyraxo",
+  "short_name": "Veyraxo",
+  "description": "Turn ideas into traction.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0C1326",
+  "background_color": "#0C1326",
+  "icons": [
+    {
+      "src": "/brand/veyraxo-logo.svg",
+      "sizes": "1024x1024",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
