@@ -1,224 +1,34 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0C1326" />
-    <meta name="description" content="Veyraxo turns ideas into traction through AI-powered execution, validation, and accountability." />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="icon" href="/brand/veyraxo-logo.svg" type="image/svg+xml" />
-    <title>Veyraxo | Turn ideas into traction</title>
-    <style>
-      :root {
-        --bg: #0c1326;
-        --bg2: #141d38;
-        --text: #eaf2ff;
-        --muted: rgba(234, 242, 255, 0.68);
-        --line: rgba(234, 242, 255, 0.12);
-        --violet: #6e5ce7;
-        --cyan: #4fd1c5;
-      }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        color: var(--text);
-        background:
-          radial-gradient(circle at 30% 20%, rgba(110, 92, 231, 0.30), transparent 32%),
-          radial-gradient(circle at 80% 10%, rgba(79, 209, 197, 0.14), transparent 26%),
-          linear-gradient(135deg, #050813 0%, var(--bg) 52%, #070a14 100%);
-        min-height: 100vh;
-      }
-      .page {
-        width: min(1120px, calc(100% - 40px));
-        margin: 0 auto;
-        padding: 38px 0 72px;
-      }
-      header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 86px;
-      }
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        font-weight: 700;
-        letter-spacing: -0.03em;
-      }
-      .brand img, .brand svg {
-        width: 42px;
-        height: 42px;
-        border-radius: 14px;
-        box-shadow: 0 0 40px rgba(110, 92, 231, 0.32);
-      }
-      nav { display: flex; gap: 22px; color: var(--muted); font-size: 14px; }
-      .hero {
-        display: grid;
-        grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
-        gap: 76px;
-        align-items: center;
-      }
-      .eyebrow {
-        display: inline-flex;
-        gap: 8px;
-        align-items: center;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        padding: 8px 12px;
-        color: var(--muted);
-        font-size: 13px;
-        margin-bottom: 30px;
-        background: rgba(255, 255, 255, 0.04);
-      }
-      .dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 999px;
-        background: linear-gradient(135deg, var(--violet), var(--cyan));
-      }
-      h1 {
-        margin: 0;
-        max-width: 660px;
-        font-size: clamp(52px, 6.4vw, 88px);
-        font-weight: 800;
-        letter-spacing: -0.028em;
-        line-height: 1.06;
-        text-wrap: balance;
-      }
-      h1 .line { display: block; }
-      .gradient {
-        display: inline;
-        background: linear-gradient(135deg, #fff 0%, #dcd8ff 45%, var(--cyan) 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-      .lead {
-        margin: 34px 0 0;
-        max-width: 650px;
-        color: var(--muted);
-        font-size: 20px;
-        line-height: 1.68;
-      }
-      .actions { display: flex; gap: 14px; margin-top: 42px; flex-wrap: wrap; }
-      .btn {
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 14px 18px;
-        color: var(--text);
-        text-decoration: none;
-        font-weight: 700;
-        background: rgba(255, 255, 255, 0.06);
-      }
-      .btn.primary {
-        border: 0;
-        background: linear-gradient(135deg, var(--violet), var(--cyan));
-        color: #050813;
-      }
-      .panel {
-        border: 1px solid var(--line);
-        border-radius: 34px;
-        background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035));
-        box-shadow: 0 30px 120px rgba(0,0,0,0.42);
-        padding: 22px;
-      }
-      .appcard {
-        min-height: 540px;
-        border-radius: 28px;
-        padding: 22px;
-        background: linear-gradient(180deg, #121a33, #070a14);
-        overflow: hidden;
-        position: relative;
-      }
-      .appTop { display:flex; align-items:center; gap:14px; margin-bottom:30px; }
-      .appTop img { width:68px; height:68px; border-radius:20px; }
-      .small { color: var(--muted); font-size: 13px; }
-      .card {
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        padding: 18px;
-        margin-top: 14px;
-        background: rgba(255, 255, 255, 0.045);
-      }
-      .card h3 { margin: 0 0 8px; letter-spacing: -0.03em; }
-      .metric { display:grid; grid-template-columns: repeat(3,1fr); gap:12px; margin-top:18px; }
-      .metric div { border:1px solid var(--line); border-radius:18px; padding:14px; }
-      .metric strong { display:block; font-size:28px; }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
-        margin-top: 72px;
-      }
-      .feature {
-        border: 1px solid var(--line);
-        border-radius: 26px;
-        padding: 24px;
-        background: rgba(255,255,255,0.045);
-      }
-      .feature h3 { margin: 0 0 10px; }
-      .feature p { margin: 0; color: var(--muted); line-height: 1.55; }
-      @media (max-width: 980px) {
-        header { margin-bottom: 50px; }
-        nav { display: none; }
-        .hero { grid-template-columns: 1fr; gap: 46px; }
-        .grid { grid-template-columns: 1fr 1fr; }
-      }
-      @media (max-width: 620px) {
-        .page { width: min(100% - 28px, 1120px); padding-top: 26px; }
-        h1 { font-size: clamp(46px, 14vw, 64px); letter-spacing: -0.018em; line-height: 1.08; }
-        .lead { font-size: 17px; }
-        .grid { grid-template-columns: 1fr; }
-        .metric { grid-template-columns: 1fr; }
-      }
-    </style>
-  </head>
-  <body>
-    <main class="page">
-      <header>
-        <div class="brand"><img src="/brand/veyraxo-logo.svg" alt="Veyraxo logo" /> Veyraxo</div>
-        <nav><span>Validate</span><span>Sprint</span><span>Measure</span></nav>
-      </header>
-      <section class="hero">
-        <div>
-          <div class="eyebrow"><span class="dot"></span> AI execution system for commercial traction</div>
-          <h1><span class="line">Turn ideas</span><span class="line">into <span class="gradient">traction.</span></span></h1>
-          <p class="lead">Veyraxo helps creators, solo founders, and small teams validate offers, build commercial sprints, track market signals, and stay accountable to the next action.</p>
-          <div class="actions">
-            <a class="btn primary" href="#start">Start your sprint</a>
-            <a class="btn" href="/docs/brand/brand.md">View brand guide</a>
-          </div>
-        </div>
-        <div class="panel">
-          <div class="appcard">
-            <div class="appTop">
-              <img src="/brand/veyraxo-logo.svg" alt="Veyraxo app icon" />
-              <div><strong>Veyraxo</strong><div class="small">Direction + action + outcome</div></div>
-            </div>
-            <div class="card">
-              <h3>Today's next action</h3>
-              <div class="small">Validate your offer with 12 direct market signals before building more assets.</div>
-            </div>
-            <div class="card">
-              <h3>Commercial sprint</h3>
-              <div class="small">Day 3 of 14. Offer score improved from 61 to 78.</div>
-            </div>
-            <div class="metric">
-              <div><strong>32</strong><span class="small">Leads</span></div>
-              <div><strong>9</strong><span class="small">Replies</span></div>
-              <div><strong>3</strong><span class="small">Calls</span></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="grid" id="start">
-        <div class="feature"><h3>Offer validation</h3><p>Score the idea before spending energy on the wrong assets.</p></div>
-        <div class="feature"><h3>Sprint execution</h3><p>Turn the offer into a focused plan with daily actions and clear gates.</p></div>
-        <div class="feature"><h3>Market signal loop</h3><p>Track leads, replies, bookings, payments, and what the market is telling you.</p></div>
-        <div class="feature"><h3>Daily accountability</h3><p>Know the next commercial action every day and keep momentum alive.</p></div>
-      </section>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>veyraxo - MVP Product Preview</title>
+  <meta name="description" content="Static Veyraxo MVP frontend flow preview." />
+  <link rel="icon" href="/brand/veyraxo-logo.svg" type="image/svg+xml" />
+  <style>
+    :root{--ink:#090e1d;--violet:#6e5ce7;--violet-soft:#8e7cff;--cyan:#4fd1c5;--fog:#eaf2ff;--muted:#bfccf3;--line:rgba(234,242,255,.15);--panel:rgba(234,242,255,.05);--panel-2:rgba(234,242,255,.035);--ok:#7ee7dc}
+    *{box-sizing:border-box}html,body{margin:0}body{font-family:Inter,system-ui,-apple-system,sans-serif;color:var(--fog);background:radial-gradient(900px 560px at 82% -14%,rgba(110,92,231,.32),transparent 58%),radial-gradient(720px 420px at 8% 14%,rgba(79,209,197,.11),transparent 58%),linear-gradient(180deg,#090e1d 0%,#0b1021 70%,#090e1d 100%)}
+    .wrap{max-width:1160px;margin:0 auto;padding:24px 20px 78px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:20px}.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--fog);font-weight:650}.brand img{width:34px;height:34px;border-radius:10px;box-shadow:0 8px 20px rgba(110,92,231,.33)}.tag{font-size:.74rem;text-transform:uppercase;letter-spacing:.13em;color:#d7e2ff;border:1px solid var(--line);padding:6px 10px;border-radius:999px;background:var(--panel-2)}
+    .hero{display:grid;grid-template-columns:1.02fr .98fr;gap:34px;align-items:center;padding:14px 0 30px}h1{margin:0;font-family:"Space Grotesk","Sora",Inter,sans-serif;font-size:clamp(2.1rem,6.4vw,4.7rem);line-height:1.1;letter-spacing:-.016em;max-width:11ch}.grad{background:linear-gradient(97deg,var(--violet-soft),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{margin:16px 0 0;color:var(--muted);line-height:1.72;max-width:58ch}.hero-card{border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,rgba(110,92,231,.16),rgba(79,209,197,.06));padding:18px}
+    .nav-demo{margin-top:22px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}.chip{font-size:.82rem;color:#d7e4ff;text-align:center;border:1px solid var(--line);background:var(--panel);padding:10px;border-radius:10px}.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;margin-top:22px}.panel{border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:16px}.panel h2{margin:0 0 12px;font-size:1rem}.col-6{grid-column:span 6}.col-8{grid-column:span 8}.col-4{grid-column:span 4}.col-12{grid-column:span 12}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--panel-2)}.field b,.stat b,.signal b{display:block;font-size:.76rem;color:#d6e1ff;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}.field span,td{color:var(--muted);font-size:.93rem}.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}.stat{border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--panel-2)}.stat strong{font-size:1.02rem}
+    table{width:100%;border-collapse:collapse;font-size:.93rem}th,td{padding:10px;border-bottom:1px solid rgba(234,242,255,.09);text-align:left}th{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:#d5e0ff}.signal-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.signal{border:1px solid var(--line);border-radius:12px;background:var(--panel-2);padding:12px}.signal strong{font-size:1.18rem}.account{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}.next{color:#dbe6ff;font-weight:560}.btn{border:0;border-radius:11px;padding:11px 14px;font-weight:650;color:white;background:linear-gradient(98deg,var(--violet),var(--cyan));box-shadow:0 10px 24px rgba(110,92,231,.34)}
+    @media(max-width:980px){.hero{grid-template-columns:1fr}.nav-demo{grid-template-columns:repeat(3,1fr)}.col-6,.col-8,.col-4{grid-column:span 12}.signal-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:640px){.wrap{padding:16px 14px 54px}.form-grid,.stats,.signal-grid{grid-template-columns:1fr}.nav-demo{grid-template-columns:1fr 1fr}h1{max-width:100%}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="topbar"><a class="brand" href="#"><img src="/brand/veyraxo-logo.svg" alt="veyraxo logo"/>veyraxo</a><span class="tag">TURN IDEAS INTO TRACTION</span></header>
+    <section class="hero"><div><h1>Static MVP<br><span class="grad">product flow preview.</span></h1><p class="lead">This is the first Veyraxo frontend flow as static screens only. It previews the product journey from project setup to validation, execution, lead movement, and signal-based decisions.</p><nav class="nav-demo" aria-label="Product demo navigation"><div class="chip">Landing</div><div class="chip">Create project</div><div class="chip">Validate offer</div><div class="chip">Sprint dashboard</div><div class="chip">Leads</div><div class="chip">Signals</div></nav></div><aside class="hero-card"><h2 style="margin:0 0 8px">Preview mode</h2><p style="margin:0;color:var(--muted);line-height:1.65">No backend, auth, database, or API is connected yet. This prototype focuses only on premium UX direction, structure, and clarity.</p></aside></section>
+    <section class="grid">
+      <article class="panel col-6"><h2>Create project</h2><div class="form-grid"><div class="field"><b>Idea name</b><span>AI Offer Sprint Studio</span></div><div class="field"><b>Target customer</b><span>Solo consultants scaling to agency</span></div><div class="field"><b>Desired outcome</b><span>Book 10 qualified calls in 30 days</span></div><div class="field"><b>Revenue goal</b><span>20000 monthly recurring</span></div><div class="field" style="grid-column:1/-1"><b>Timeline</b><span>6-week execution window</span></div></div></article>
+      <article class="panel col-6"><h2>Validate offer</h2><div class="form-grid"><div class="field" style="grid-column:1/-1"><b>Who is this for?</b><span>Founder-led B2B service operators with inconsistent pipeline.</span></div><div class="field" style="grid-column:1/-1"><b>What painful problem does it solve?</b><span>Unclear positioning and no consistent execution rhythm.</span></div><div class="field" style="grid-column:1/-1"><b>What is the paid offer?</b><span>6-week traction sprint with weekly accountability and signal reviews.</span></div><div class="field"><b>Why now?</b><span>Growth target and increasing acquisition pressure.</span></div><div class="field"><b>What proof do we have?</b><span>Past client outcomes and pilot response uplift.</span></div></div></article>
+      <article class="panel col-8"><h2>Sprint dashboard</h2><div class="stats"><div class="stat"><b>Offer score</b><strong>8.4 / 10</strong></div><div class="stat"><b>Sprint day</b><strong>Day 9 of 30</strong></div><div class="stat"><b>Next action</b><strong>Send 12 tailored outreach messages</strong></div><div class="stat"><b>Blockers</b><strong>Case-study proof snippets missing</strong></div><div class="stat" style="grid-column:1/-1"><b>Weekly goal</b><strong>3 booked calls and 1 paid test</strong></div></div></article>
+      <article class="panel col-4"><h2>Daily accountability</h2><div class="account"><div class="next">Next clear action: Publish revised offer page headline today.</div><button class="btn" type="button">Complete action</button></div></article>
+      <article class="panel col-12"><h2>Lead pipeline</h2><table aria-label="Lead pipeline table"><thead><tr><th>Lead</th><th>Channel</th><th>Status</th><th>Last touch</th><th>Next move</th></tr></thead><tbody><tr><td>Northstar Studio</td><td>LinkedIn</td><td>Replied</td><td>Today</td><td>Send short case study</td></tr><tr><td>PeakOps Consulting</td><td>Email</td><td>Warm</td><td>Yesterday</td><td>Book discovery call</td></tr><tr><td>Lumen Strategy</td><td>Referral</td><td>Qualified</td><td>2 days ago</td><td>Share paid pilot scope</td></tr></tbody></table></article>
+      <article class="panel col-12"><h2>Market signal tracker</h2><div class="signal-grid"><div class="signal"><b>Replies</b><strong>27</strong></div><div class="signal"><b>Booked calls</b><strong>6</strong></div><div class="signal"><b>Paid tests</b><strong>2</strong></div><div class="signal"><b>Objections</b><strong>Price clarity</strong></div><div class="signal"><b>Strong signals</b><strong class="ok">Urgency plus pain acknowledged</strong></div></div></article>
+    </section>
+  </main>
+</body>
 </html>
