@@ -1,0 +1,29 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(760 224) rotate(128) scale(860 820)">
+      <stop stop-color="#2A1D63"/>
+      <stop offset="0.45" stop-color="#111938"/>
+      <stop offset="1" stop-color="#090E1D"/>
+    </radialGradient>
+    <linearGradient id="ribbon" x1="348" y1="320" x2="722" y2="706" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8E7CFF"/>
+      <stop offset="0.52" stop-color="#6E5CE7"/>
+      <stop offset="1" stop-color="#4FD1C5"/>
+    </linearGradient>
+    <filter id="softGlow" x="184" y="188" width="668" height="656" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+
+  <rect x="64" y="64" width="896" height="896" rx="228" fill="url(#bgGlow)"/>
+
+  <g filter="url(#softGlow)" opacity="0.45">
+    <path d="M320 322H428L514 520L598 322H706L560 710H466L320 322Z" fill="#7C6CF0"/>
+  </g>
+
+  <g>
+    <path d="M320 322H430L514 520L598 322H708L560 710H468L320 322Z" fill="url(#ribbon)"/>
+    <path d="M514 560L608 734H422L514 560Z" fill="#EAF2FF" fill-opacity="0.96"/>
+    <path d="M430 322L514 520L598 322H708L646 430H566L514 518L460 430H380L320 322H430Z" fill="#A294FF" fill-opacity="0.34"/>
+  </g>
+</svg>

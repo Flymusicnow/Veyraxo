@@ -1,0 +1,15 @@
+{
+  "name": "Veyraxo",
+  "short_name": "Veyraxo",
+  "icons": [
+    {
+      "src": "/brand/veyraxo-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": "#090E1D",
+  "background_color": "#090E1D",
+  "display": "standalone"
+}
